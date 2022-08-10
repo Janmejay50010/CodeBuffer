@@ -30,4 +30,10 @@ public class Course {
     private String title;
     private Integer credit;
 
+    @OneToOne(
+            mappedBy = "course",
+            fetch = FetchType.LAZY
+    )
+    private CourseMaterial courseMaterial;
+
 }
